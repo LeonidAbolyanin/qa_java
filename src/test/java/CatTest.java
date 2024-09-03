@@ -4,9 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -35,8 +33,8 @@ public class CatTest {
     @Parameterized.Parameters
     public static Object[][] data() {
         return new Object[][]{
-                {Arrays.asList("Животные", "Птицы", "Рыба"), (Object) false}, // Ожидаем, что метод УКАЗЫВАЕТ на правильный тип пищи
-                {null, (Object) true} // Ожидаем исключение
+                {Arrays.asList("Животные", "Птицы", "Рыба"), false}, // Ожидаем, что метод УКАЗЫВАЕТ на правильный тип пищи
+                {null, true} // Ожидаем исключение
         };
     }
 
